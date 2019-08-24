@@ -47,10 +47,13 @@
         "test:watch": "jest --watch tests",
         "test:ci": "jest --ci tests",
         "clean": "rimraf ./docs ./dist ./coverage test-report.xml",
-        "gen": "sgen -g npm -g log -d design.json"
+        "gen": "sgen -g npm -g log -g bst -d design.json"
     },
     "license": "UNLICENSED",
-    "dependencies": {},
+    "dependencies": {
+        "@kurlytail/gen-bst": "^1.3.37",
+        "@kurlytail/gen-npm": "^1.3.25"
+    },
     "jest": {
         "testResultsProcessor": "./node_modules/jest-junit-reporter",
         "moduleDirectories": [
