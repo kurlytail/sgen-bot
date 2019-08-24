@@ -1,0 +1,64 @@
+# Node.js
+# Build a general Node.js project with npm.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
+
+trigger:
+    batch: true
+    branches:
+        include:
+            - master
+
+variables:
+    - group: BST
+
+pool:
+    vmImage: 'ubuntu-latest'
+
+steps:
+    - task: NodeTool@0
+      inputs:
+          versionSpec: '10.x'
+      displayName: 'Install Node.js'
+
+    - task: npmAuthenticate@0
+      inputs:
+          workingFile: '.npmrc'
+          customEndpoint: 'kurlytail-npm'
+
+    - task: CmdLine@2
+      inputs:
+          script: |
+              npm install
+              npm --no-git-tag-version version patch
+              npm run build
+              npm run lint
+              npm run test
+      displayName: 'Building package'
+
+    - task: CmdLine@2
+      condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
+      inputs:
+          script: |
+              git config --global user.email "ashwinkn@hotmail.com"
+              git config --global user.name "Ashwin Kamath"
+              git add package.json
+              git commit -m '***NO_CI*** Updated version'
+              git push https://${GITHUB_TOKEN}@github.com/${BUILD_REPOSITORY_NAME}.git HEAD:${BUILD_SOURCEBRANCH}
+              env
+      displayName: 'Pushing version into git'
+      env:
+          GITHUB_TOKEN: $(GITHUB_TOKEN)
+
+    - task: CmdLine@2
+      condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
+      inputs:
+          script: |
+              npm publish
+      displayName: 'Publishing package'
+
+    - task: PublishTestResults@1
+      condition: succeededOrFailed()
+      inputs:
+          testRunner: JUnit
+          testResultsFiles: 'test-report.xml'
