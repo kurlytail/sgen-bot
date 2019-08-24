@@ -1,0 +1,15 @@
+{
+    "design": ["design.json"],
+    "map": [
+        "../../.nvm/versions/node/v10.9.0/lib/node_modules/@kurlytail/gen-npm/templates/map.json",
+        "../../.nvm/versions/node/v10.9.0/lib/node_modules/@kurlytail/gen-log/templates/map.json",
+        "../../.nvm/versions/node/v10.9.0/lib/node_modules/@kurlytail/gen-github-app/templates/map.json"
+    ],
+    "extension": [
+        "../../.nvm/versions/node/v10.9.0/lib/node_modules/@kurlytail/gen-npm/templates/extensions",
+        "../../.nvm/versions/node/v10.9.0/lib/node_modules/@kurlytail/gen-github-app/templates/extensions"
+    ],
+    "generator": ["npm", "log", "github-app"],
+    "g": ["npm", "log", "github-app"],
+    "d": ["design.json"]
+}

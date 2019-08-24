@@ -1,0 +1,62 @@
+{
+    ".editorconfig": {
+        "template": "../../.nvm/versions/node/v10.9.0/lib/node_modules/@kurlytail/gen-npm/templates/.editorconfig._"
+    },
+    ".eslintignore": {
+        "template": "../../.nvm/versions/node/v10.9.0/lib/node_modules/@kurlytail/gen-npm/templates/.eslintignore._"
+    },
+    ".babelrc": {
+        "template": "../../.nvm/versions/node/v10.9.0/lib/node_modules/@kurlytail/gen-npm/templates/.babelrc._"
+    },
+    ".eslintrc.js": {
+        "template": "../../.nvm/versions/node/v10.9.0/lib/node_modules/@kurlytail/gen-npm/templates/.eslintrc.js._"
+    },
+    ".gitignore": {
+        "template": "../../.nvm/versions/node/v10.9.0/lib/node_modules/@kurlytail/gen-npm/templates/.gitignore._"
+    },
+    ".npmignore": {
+        "template": "../../.nvm/versions/node/v10.9.0/lib/node_modules/@kurlytail/gen-npm/templates/.npmignore._"
+    },
+    ".prettierrc": {
+        "template": "../../.nvm/versions/node/v10.9.0/lib/node_modules/@kurlytail/gen-log/templates/.prettierrc._"
+    },
+    "Jenkinsfile": {
+        "template": "../../.nvm/versions/node/v10.9.0/lib/node_modules/@kurlytail/gen-npm/templates/Jenkinsfile._"
+    },
+    "package.json": {
+        "template": "../../.nvm/versions/node/v10.9.0/lib/node_modules/@kurlytail/gen-npm/templates/package.json._"
+    },
+    "README.md": {
+        "template": "../../.nvm/versions/node/v10.9.0/lib/node_modules/@kurlytail/gen-npm/templates/README.md._"
+    },
+    "webpack.config.js": {
+        "template": "../../.nvm/versions/node/v10.9.0/lib/node_modules/@kurlytail/gen-npm/templates/webpack.config.js._"
+    },
+    "src/js/index.js": {
+        "template":
+            "../../.nvm/versions/node/v10.9.0/lib/node_modules/@kurlytail/gen-github-app/templates/src/js/index.js._"
+    },
+    "src/js/__tests__/integration.js": {
+        "template": "../../.nvm/versions/node/v10.9.0/lib/node_modules/@kurlytail/gen-npm/templates/integration.js._"
+    },
+    ".flowconfig": {
+        "template": "../../.nvm/versions/node/v10.9.0/lib/node_modules/@kurlytail/gen-npm/templates/.flowconfig._"
+    },
+    "logs/map.json": {
+        "template": "../../.nvm/versions/node/v10.9.0/lib/node_modules/@kurlytail/gen-log/templates/logs/map.json._"
+    },
+    "logs/options.json": {
+        "template": "../../.nvm/versions/node/v10.9.0/lib/node_modules/@kurlytail/gen-log/templates/logs/options.json._"
+    },
+    ".env": {
+        "template": "../../.nvm/versions/node/v10.9.0/lib/node_modules/@kurlytail/gen-github-app/templates/.env._"
+    },
+    "src/js/__tests__/index.js": {
+        "template":
+            "../../.nvm/versions/node/v10.9.0/lib/node_modules/@kurlytail/gen-github-app/templates/src/js/__tests__/index.js._"
+    },
+    "src/js/__tests__/fixtures/issues.opened.json": {
+        "template":
+            "../../.nvm/versions/node/v10.9.0/lib/node_modules/@kurlytail/gen-github-app/templates/src/js/__tests__/fixtures/issues.opened.json._"
+    }
+}
