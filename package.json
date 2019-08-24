@@ -43,25 +43,38 @@
         "babel-preset-flow": "^6.23.0"
     },
     "scripts": {
-        "start": "probot run dist/app.min.js",
+        "start": "probot run src/js/index.js",
         "docs": "jsdoc -c jsdoc.json && npx opn-cli ./docs/index.html",
         "build": "NODE_ENV=\"debug\" webpack --mode development --display-modules --display-reasons",
         "lint": "eslint src",
         "test": "jest tests",
         "test:watch": "jest --watch tests",
         "test:ci": "jest --ci tests",
-        "clean": "rimraf ./docs ./dist ./coverage test-report.xml"
+        "clean": "rimraf ./docs ./dist ./coverage test-report.xml",
+        "gen": "sgen -g npm -g log -d design.json"
     },
     "license": "UNLICENSED",
     "dependencies": {},
-
     "jest": {
         "testResultsProcessor": "./node_modules/jest-junit-reporter",
-        "moduleDirectories": ["node_modules", "./src"],
-        "testPathIgnorePatterns": ["./.generated"],
+        "moduleDirectories": [
+            "node_modules",
+            "./src"
+        ],
+        "testPathIgnorePatterns": [
+            "./.generated"
+        ],
         "collectCoverage": true,
-        "coverageReporters": ["text", "html"],
-        "collectCoverageFrom": ["src/**/*.js", "!**/node_modules/**"],
-        "setupFiles": ["jest-localstorage-mock"]
+        "coverageReporters": [
+            "text",
+            "html"
+        ],
+        "collectCoverageFrom": [
+            "src/**/*.js",
+            "!**/node_modules/**"
+        ],
+        "setupFiles": [
+            "jest-localstorage-mock"
+        ]
     }
 }

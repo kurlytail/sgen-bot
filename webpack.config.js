@@ -22,7 +22,8 @@ const config = {
         filename: `[name]${isDist}.js`,
         path: distPath,
         pathinfo: !isProd,
-        libraryTarget: 'var'
+        libraryTarget: 'umd',
+        library: '[name]'
     },
     devtool: 'inline-source-map',
     resolve: {
