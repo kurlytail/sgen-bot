@@ -50,26 +50,14 @@
     },
     "license": "UNLICENSED",
     "dependencies": {},
+
     "jest": {
         "testResultsProcessor": "./node_modules/jest-junit-reporter",
-        "moduleDirectories": [
-            "node_modules",
-            "./src"
-        ],
-        "testPathIgnorePatterns": [
-            "./.generated"
-        ],
+        "moduleDirectories": ["node_modules", "./src"],
+        "testPathIgnorePatterns": ["./.generated"],
         "collectCoverage": true,
-        "coverageReporters": [
-            "text",
-            "html"
-        ],
-        "collectCoverageFrom": [
-            "src/**/*.js",
-            "!**/node_modules/**"
-        ],
-        "setupFiles": [
-            "jest-localstorage-mock"
-        ]
+        "coverageReporters": ["text", "html"],
+        "collectCoverageFrom": ["src/**/*.js", "!**/node_modules/**"],
+        "setupFiles": ["jest-localstorage-mock"]
     }
 }
