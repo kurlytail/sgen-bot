@@ -5,7 +5,7 @@
     "main": "dist/app.min.js",
     "devDependencies": {
         "child_process": "1.0.2",
-        "circular-dependency-plugin": "5.0.2",
+        "circular-dependency-plugin": "5.2.0",
         "eslint": "5.15.3",
         "eslint-config-prettier": "4.1.0",
         "eslint-import-resolver-babel-module": "5.0.1",
