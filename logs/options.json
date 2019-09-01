@@ -1,11 +1,11 @@
 {
     "design": ["design.json"],
     "map": [
-        "node_modules/@kurlytail/gen-npm/templates/map.json",
-        "node_modules/@kurlytail/gen-log/templates/map.json",
-        "node_modules/@kurlytail/gen-bst/templates/map.json"
+        "../../.nvm/versions/node/v10.9.0/lib/node_modules/@kurlytail/gen-npm/templates/map.json",
+        "../../.nvm/versions/node/v10.9.0/lib/node_modules/@kurlytail/gen-log/templates/map.json",
+        "../../.nvm/versions/node/v10.9.0/lib/node_modules/@kurlytail/gen-bst/templates/map.json"
     ],
-    "extension": ["node_modules/@kurlytail/gen-npm/templates/extensions"],
+    "extension": ["../../.nvm/versions/node/v10.9.0/lib/node_modules/@kurlytail/gen-npm/templates/extensions"],
     "generator": ["npm", "log", "bst"],
     "g": ["npm", "log", "bst"],
     "d": ["design.json"]
