@@ -52,7 +52,7 @@
     },
     "license": "UNLICENSED",
     "dependencies": {
-        "@kurlytail/gen-bst": "1.3.43",
+        "@kurlytail/gen-bst": "1.3.44",
         "@kurlytail/gen-log": "1.3.46",
         "@kurlytail/gen-npm": "1.3.25",
         "yaml": "1.6.0"
