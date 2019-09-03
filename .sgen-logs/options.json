@@ -7,6 +7,6 @@
     ],
     "extension": ["../../.nvm/versions/node/v10.9.0/lib/node_modules/@kurlytail/gen-npm/templates/extensions"],
     "generator": ["npm", "log", "bst"],
-    "g": ["npm", "log", "bst"],
-    "d": ["design.json"]
+    "options": [".sgenbot.yml"],
+    "p": [".sgenbot.yml"]
 }
