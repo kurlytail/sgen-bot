@@ -1,0 +1,19 @@
+{
+    "lib": { "packageName": "@kurlytail/gen-lib", "version": "1.3.23" },
+    "npm": {
+        "version": "1.3.34",
+        "map": ["../../.nvm/versions/node/v10.9.0/lib/node_modules/@kurlytail/gen-npm/templates/map.json"],
+        "extension": ["../../.nvm/versions/node/v10.9.0/lib/node_modules/@kurlytail/gen-npm/templates/extensions"],
+        "packageName": "@kurlytail/gen-npm"
+    },
+    "log": {
+        "version": "1.3.48",
+        "map": ["../../.nvm/versions/node/v10.9.0/lib/node_modules/@kurlytail/gen-log/templates/map.json"],
+        "packageName": "@kurlytail/gen-log"
+    },
+    "bst": {
+        "version": "1.3.48",
+        "map": ["../../.nvm/versions/node/v10.9.0/lib/node_modules/@kurlytail/gen-bst/templates/map.json"],
+        "packageName": "@kurlytail/gen-bst"
+    }
+}
