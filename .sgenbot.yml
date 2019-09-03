@@ -1,0 +1,6 @@
+design:
+    - design.json
+generator:
+    - npm
+    - log
+    - bst
