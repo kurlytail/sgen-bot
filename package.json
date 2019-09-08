@@ -72,5 +72,9 @@
         "setupFiles": [
             "jest-localstorage-mock"
         ]
+    },
+    "dependencies": {
+        "logform": "^2.1.2",
+        "winston": "^3.2.1"
     }
 }
