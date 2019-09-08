@@ -7,5 +7,5 @@ const logger = winston.createLogger({
     format: format.simple()
 });
 
-FSM.observe('onTransition', attrib => logger.info(`${attrib.from} -> ${attrib.transition} -> ${attrib.to}`));
+FSM.observe('onTransition', attrib => logger.debug(`${attrib.from} -> ${attrib.transition} -> ${attrib.to}`));
 export default logger;

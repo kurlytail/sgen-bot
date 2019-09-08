@@ -1,11 +1,13 @@
 import FSM from './sgen-sm';
 import './logger';
+import './dirmgr';
+import './design';
 
 FSM.createTempDirectory();
 FSM.prepareDesign();
 FSM.preparePackages();
-FSM.generateBaseDesign();
+FSM.generateDesign();
 FSM.updateDesign();
-FSM.updatePackages();
-FSM.regenerateDesign();
+FSM.preparePackages();
+FSM.generateDesign();
 FSM.cleanup();
