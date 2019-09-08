@@ -74,7 +74,10 @@
         ]
     },
     "dependencies": {
-        "logform": "^2.1.2",
-        "winston": "^3.2.1"
+        "logform": "2.1.2",
+        "winston": "3.2.1"
+    },
+    "bin": {
+        "sgen-bot": "dist/app.min.js"
     }
 }

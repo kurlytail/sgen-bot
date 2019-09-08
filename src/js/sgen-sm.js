@@ -9,7 +9,8 @@ const fsm = new SM({
         { name: 'generate_base_design', from: 'packages_ready', to: 'base_ready' },
         { name: 'update_design', from: 'base_ready', to: 'design_updated' },
         { name: 'update_packages', from: 'design_updated', to: 'packages_updated' },
-        { name: 'regenerate_design', froom: 'packages_updated', to: 'done' }
+        { name: 'regenerate_design', from: 'packages_updated', to: 'regenerated' },
+        { name: 'cleanup', from: 'regenerated', to: 'done' }
     ]
 });
 
