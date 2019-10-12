@@ -74,9 +74,11 @@
         ]
     },
     "dependencies": {
+        "fs-extra": "^8.1.0",
         "logform": "2.1.2",
         "tmp": "^0.1.0",
-        "winston": "3.2.1"
+        "winston": "3.2.1",
+        "yaml": "^1.6.0"
     },
     "bin": {
         "sgen-bot": "dist/app.min.js"
