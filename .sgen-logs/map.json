@@ -1,65 +1,63 @@
 {
     ".editorconfig": {
-        "template": "../../.nvm/versions/node/v10.9.0/lib/node_modules/@kurlytail/gen-npm/templates/.editorconfig._"
+        "template": "./node_modules/@kurlytail/gen-npm/templates/.editorconfig._"
     },
     ".eslintignore": {
-        "template": "../../.nvm/versions/node/v10.9.0/lib/node_modules/@kurlytail/gen-npm/templates/.eslintignore._"
+        "template": "./node_modules/@kurlytail/gen-npm/templates/.eslintignore._"
     },
     ".babelrc": {
-        "template": "../../.nvm/versions/node/v10.9.0/lib/node_modules/@kurlytail/gen-npm/templates/.babelrc._"
+        "template": "./node_modules/@kurlytail/gen-npm/templates/.babelrc._"
     },
     ".eslintrc.js": {
-        "template": "../../.nvm/versions/node/v10.9.0/lib/node_modules/@kurlytail/gen-npm/templates/.eslintrc.js._"
+        "template": "./node_modules/@kurlytail/gen-npm/templates/.eslintrc.js._"
     },
     ".gitignore": {
-        "template": "../../.nvm/versions/node/v10.9.0/lib/node_modules/@kurlytail/gen-npm/templates/.gitignore._"
+        "template": "./node_modules/@kurlytail/gen-npm/templates/.gitignore._"
     },
     ".npmignore": {
-        "template": "../../.nvm/versions/node/v10.9.0/lib/node_modules/@kurlytail/gen-npm/templates/.npmignore._"
+        "template": "./node_modules/@kurlytail/gen-npm/templates/.npmignore._"
     },
     ".prettierrc": {
-        "template": "../../.nvm/versions/node/v10.9.0/lib/node_modules/@kurlytail/gen-bst/templates/.prettierrc._"
+        "template": "./node_modules/@kurlytail/gen-bst/templates/.prettierrc._"
     },
     "Jenkinsfile": {
-        "template": "../../.nvm/versions/node/v10.9.0/lib/node_modules/@kurlytail/gen-npm/templates/Jenkinsfile._"
+        "template": "./node_modules/@kurlytail/gen-npm/templates/Jenkinsfile._"
     },
     "package.json": {
-        "template": "../../.nvm/versions/node/v10.9.0/lib/node_modules/@kurlytail/gen-npm/templates/package.json._"
+        "template": "./node_modules/@kurlytail/gen-npm/templates/package.json._"
     },
     "README.md": {
-        "template": "../../.nvm/versions/node/v10.9.0/lib/node_modules/@kurlytail/gen-npm/templates/README.md._"
+        "template": "./node_modules/@kurlytail/gen-npm/templates/README.md._"
     },
     "webpack.config.js": {
-        "template": "../../.nvm/versions/node/v10.9.0/lib/node_modules/@kurlytail/gen-npm/templates/webpack.config.js._"
+        "template": "./node_modules/@kurlytail/gen-npm/templates/webpack.config.js._"
     },
     "src/js/index.js": {
-        "template": "../../.nvm/versions/node/v10.9.0/lib/node_modules/@kurlytail/gen-npm/templates/src/js/index.js._"
+        "template": "./node_modules/@kurlytail/gen-npm/templates/src/js/index.js._"
     },
     "src/js/__tests__/integration.js": {
-        "template": "../../.nvm/versions/node/v10.9.0/lib/node_modules/@kurlytail/gen-npm/templates/integration.js._"
+        "template": "./node_modules/@kurlytail/gen-npm/templates/integration.js._"
     },
     ".flowconfig": {
-        "template": "../../.nvm/versions/node/v10.9.0/lib/node_modules/@kurlytail/gen-npm/templates/.flowconfig._"
+        "template": "./node_modules/@kurlytail/gen-npm/templates/.flowconfig._"
     },
     ".sgen-logs/map.json": {
-        "template": "../../.nvm/versions/node/v10.9.0/lib/node_modules/@kurlytail/gen-log/templates/logs/map.json._"
+        "template": "./node_modules/@kurlytail/gen-log/templates/logs/map.json._"
     },
     ".sgen-logs/options.json": {
-        "template": "../../.nvm/versions/node/v10.9.0/lib/node_modules/@kurlytail/gen-log/templates/logs/options.json._"
+        "template": "./node_modules/@kurlytail/gen-log/templates/logs/options.json._"
     },
     ".sgen-logs/packages.json": {
-        "template":
-            "../../.nvm/versions/node/v10.9.0/lib/node_modules/@kurlytail/gen-log/templates/logs/packages.json._"
+        "template": "./node_modules/@kurlytail/gen-log/templates/logs/packages.json._"
     },
     "renovate.json": {
-        "template": "../../.nvm/versions/node/v10.9.0/lib/node_modules/@kurlytail/gen-bst/templates/renovate.json._"
+        "template": "./node_modules/@kurlytail/gen-bst/templates/renovate.json._"
     },
     ".mergify.yml": {
-        "template": "../../.nvm/versions/node/v10.9.0/lib/node_modules/@kurlytail/gen-bst/templates/.mergify.yml._"
+        "template": "./node_modules/@kurlytail/gen-bst/templates/.mergify.yml._"
     },
-    ".npmrc": { "template": "../../.nvm/versions/node/v10.9.0/lib/node_modules/@kurlytail/gen-bst/templates/.npmrc._" },
+    ".npmrc": { "template": "./node_modules/@kurlytail/gen-bst/templates/.npmrc._" },
     "azure-pipelines.yml": {
-        "template":
-            "../../.nvm/versions/node/v10.9.0/lib/node_modules/@kurlytail/gen-bst/templates/azure-pipelines.yml._"
+        "template": "./node_modules/@kurlytail/gen-bst/templates/azure-pipelines.yml._"
     }
 }

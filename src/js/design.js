@@ -4,6 +4,7 @@ import FSE from 'fs-extra';
 import DIRMGR from './dirmgr';
 import yaml from 'yaml';
 import FS from 'fs';
+import CP from 'child_process';
 
 class DesignMgr {
     constructor() {
@@ -15,13 +16,17 @@ class DesignMgr {
     generateNewOptions() {
         FSE.ensureFileSync('.sgen-bot.yml');
 
+        /* Seed the design if does not exist */
         const sgenDef = yaml.parse(FS.readFileSync('.sgen-bot.yml', 'utf8'));
         sgenDef.design = sgenDef.design || ['design.yml'];
         sgenDef.generator = sgenDef.generator || ['log'];
 
+        /* Make sure all design files exist */
         sgenDef.design.forEach(designFile => FSE.ensureFileSync(designFile));
+        /* Write the .sgen-bot file */
         FS.writeFileSync('.sgen-bot.yml', yaml.stringify(sgenDef), 'utf8');
 
+        /* Copy design files to working diretory */
         sgenDef.design.forEach(designFile => {
             LOG.info(`Copying ${designFile}`);
             FSE.copySync(designFile, DIRMGR.workingDirectory + '/' + designFile);
@@ -57,12 +62,26 @@ class DesignMgr {
     }
 
     updateDesign() {
-        LOG.info('Updating design');
+        LOG.info('Updating design -- ' + process.cwd());
         FSE.copySync('.sgen-bot.yml', DIRMGR.workingDirectory + '/.sgen-bot.yml');
+        /* Remove old options */
+        FSE.removeSync(DIRMGR.workingDirectory + '/.sgen-logs/options.json');
+        FSE.removeSync(DIRMGR.workingDirectory + '/.sgen-logs/packages.json');
     }
 
     generateDesign() {
         LOG.info('Generating design');
+
+        const cwd = process.cwd();
+        process.chdir(DIRMGR.workingDirectory);
+
+        if (FS.existsSync(DIRMGR.workingDirectory + '/.sgen-logs/options.json')) {
+            CP.execSync(DIRMGR.workingDirectory + '/node_modules/.bin/sgen -p .sgen-logs/options.json');
+        } else {
+            CP.execSync(DIRMGR.workingDirectory + '/node_modules/.bin/sgen -p .sgen-bot.yml');
+        }
+
+        process.chdir(cwd);
     }
 }
 

@@ -1,5 +1,3 @@
-
-
 import FSM from './sgen-sm';
 import LOG from './logger';
 import tmp from 'tmp';
@@ -17,7 +15,7 @@ class DirMgr {
 
     teardownDirectories() {
         LOG.info(`Deleting temporary directory ${this.tmpDir.name}`);
-        this.tmpDir.removeCallback();
+        //this.tmpDir.removeCallback();
     }
 
     get workingDirectory() {
@@ -25,6 +23,6 @@ class DirMgr {
     }
 }
 
-const dirmgr = new DirMgr;
+const dirmgr = new DirMgr();
 
 export default dirmgr;

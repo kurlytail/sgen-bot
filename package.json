@@ -42,7 +42,8 @@
     },
     "scripts": {
         "docs": "jsdoc -c jsdoc.json && npx opn-cli ./docs/index.html",
-        "build": "NODE_ENV=\"debug\" webpack --mode development --display-modules --display-reasons",
+        "build": "NODE_ENV=\"debug\" webpack --mode=development --display-modules --display-reasons; chmod +x dist/app.min.js",
+        "build-prod": "NODE_ENV=\"production\" webpack --mode=production --display-modules --display-reasons; chmod +x dist/app.min.js",
         "lint": "eslint src",
         "test": "jest tests",
         "test:watch": "jest --watch tests",

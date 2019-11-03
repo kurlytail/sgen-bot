@@ -43,7 +43,9 @@ const config = {
         new CircularDependencyPlugin({
             exclude: /node_modules/,
             failOnError: false
-        })
+        }),
+
+        new webpack.BannerPlugin({ banner: '#!/usr/bin/env node', raw: true })
     ],
 
     module: {

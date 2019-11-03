@@ -4,6 +4,7 @@ import rimraf from 'rimraf';
 import DIRMGR from './dirmgr';
 const { execSync } = require('child_process');
 import FS from 'fs';
+import yaml from 'yaml';
 
 class PkgMgr {
     constructor() {
@@ -16,11 +17,26 @@ class PkgMgr {
         const cwd = process.cwd();
         process.chdir(DIRMGR.workingDirectory);
 
-        rimraf.sync('.node_modules');
+        rimraf.sync('node_modules');
         rimraf.sync('package-lock.json');
 
-        const options = JSON.parse(FS.readFileSync('.sgen-logs/options.json', 'utf8')) || {};
-        const packages = JSON.parse(FS.readFileSync('.sgen-logs/packages.json', 'utf8')) || {};
+        let options;
+        let packages;
+
+        try {
+            options = JSON.parse(FS.readFileSync('.sgen-logs/options.json', 'utf8'));
+        } catch (ex) {
+            try {
+                options = yaml.parse(FS.readFileSync('.sgen-bot.yml', 'utf8'));
+            } catch (ex) {
+                options = {};
+            }
+        }
+        try {
+            packages = JSON.parse(FS.readFileSync('.sgen-logs/packages.json', 'utf8'));
+        } catch (ex) {
+            packages = {};
+        }
 
         const versionedPackages = Object.keys(packages);
         const generatorPackages = options.generator || [];
@@ -35,7 +51,7 @@ class PkgMgr {
         }
 
         if (unversionedPackages.length) {
-            const installPackages = unversionedPackages.join(' ');
+            const installPackages = unversionedPackages.map(pkg => `@kurlytail/gen-${pkg}`).join(' ');
             LOG.info(`Installing packages ${installPackages}`);
             execSync(`npm install ${installPackages}`);
         }
