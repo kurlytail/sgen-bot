@@ -1,7 +1,7 @@
 {
     "name": "@kurlytail/sgen-bot",
     "description": "sgen-bot",
-    "version": "0.0.105",
+    "version": "0.0.106",
     "main": "dist/app.min.js",
     "devDependencies": {
         "child_process": "1.0.2",
