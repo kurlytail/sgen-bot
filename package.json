@@ -76,7 +76,7 @@
     },
     "dependencies": {
         "fs-extra": "^9.0.0",
-        "logform": "2.1.2",
+        "logform": "2.2.0",
         "tmp": "^0.1.0",
         "winston": "3.2.1",
         "yaml": "^1.6.0"
