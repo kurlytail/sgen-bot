@@ -16,7 +16,7 @@
         "eslint-plugin-jest": "23.20.0",
         "eslint-plugin-prettier": "3.1.4",
         "flow-bin": "0.132.0",
-        "prettier": "2.0.5",
+        "prettier": "2.1.0",
         "source-map-loader": "1.0.2",
         "uglifyjs-webpack-plugin": "2.2.0",
         "webpack": "4.44.1",
