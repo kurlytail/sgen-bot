@@ -38,7 +38,7 @@
         "babel-loader": "8.2.2",
         "babel-plugin-module-resolver": "4.1.0",
         "babel-preset-flow": "6.23.0",
-        "@octokit/rest": "18.2.1"
+        "@octokit/rest": "18.3.0"
     },
     "scripts": {
         "docs": "jsdoc -c jsdoc.json && npx opn-cli ./docs/index.html",
