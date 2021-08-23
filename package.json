@@ -24,7 +24,7 @@
         "webpack-node-externals": "3.0.0",
         "jest": "27.0.6",
         "jest-junit-reporter": "1.1.0",
-        "jest-localstorage-mock": "2.4.16",
+        "jest-localstorage-mock": "2.4.17",
         "@babel/cli": "7.14.8",
         "@babel/core": "7.15.0",
         "@babel/plugin-proposal-class-properties": "7.14.5",
